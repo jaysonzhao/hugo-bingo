@@ -2,7 +2,7 @@
 <main id="home">
     <div>
         <div class="avatar">
-            <img src="https://www.gravatar.com/avatar/{{ md5 .Site.Params.gravatar.email }}?s=240&d=mp" alt="gravatar">
+            <img src="https://avatars0.githubusercontent.com/u/17965206?s=460&v=4" alt="Jayson">
         </div>
         <div id="content">
             {{ .Content }}
@@ -17,16 +17,6 @@
         </div>
     </div>
 
-    <div id="recent-posts">
-        <h2>{{ i18n "recent_posts" }}</h2>
-        <ul>
-            {{ range first 5 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections).ByPublishDate.Reverse }}
-                <li>
-                    <span>{{- partial "date.html" . -}}</span>
-                    <a href="{{ .Permalink }}">{{ .Title }}</a>
-                </li>
-            {{ end }}
-        </ul>
-    </div>
+   
 </main>
 {{ end }}
